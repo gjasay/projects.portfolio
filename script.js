@@ -6,32 +6,44 @@ const unityCsharpProjectsTab = document.getElementById('unity-csharp-projects-ta
 // Get project sections
 const projects = document.getElementsByClassName('project');
 
+// Function to display projects based on type
+function displayProjects(type) {
+    for (let project of projects) {
+        if (project.getAttribute('data-type') === type || type === 'all') {
+            project.style.display = 'block';
+        } else {
+            project.style.display = 'none';
+        }
+    }
+}
+
 // Add click event listeners
 allProjectsTab.addEventListener('click', function(e) {
     e.preventDefault();
-    for (let project of projects) {
-        project.style.display = 'block';
-    }
+    window.location.hash = 'all';
+    displayProjects('all');
 });
 
 javascriptProjectsTab.addEventListener('click', function(e) {
     e.preventDefault();
-    for (let project of projects) {
-        if (project.getAttribute('data-type') === 'javascript') {
-            project.style.display = 'block';
-        } else {
-            project.style.display = 'none';
-        }
-    }
+    window.location.hash = 'javascript';
+    displayProjects('javascript');
 });
 
 unityCsharpProjectsTab.addEventListener('click', function(e) {
     e.preventDefault();
-    for (let project of projects) {
-        if (project.getAttribute('data-type') === 'unity-csharp') {
-            project.style.display = 'block';
-        } else {
-            project.style.display = 'none';
-        }
-    }
+    window.location.hash = 'unity-csharp';
+    displayProjects('unity-csharp');
 });
+
+// Display projects based on current hash when page loads
+window.onload = function() {
+    const hash = window.location.hash;
+    if (hash === '#javascript') {
+        displayProjects('javascript');
+    } else if (hash === '#unity-csharp') {
+        displayProjects('unity-csharp');
+    } else {
+        displayProjects('all');
+    }
+};
