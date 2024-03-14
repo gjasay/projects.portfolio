@@ -51,8 +51,17 @@ body {
     padding: 10px 0;
 }
 
-.copyright {
+.go-back {
     margin: 0;
+}
+
+.go-back a {
+    color: white;
+    text-decoration: none;
+}
+
+.go-back a:hover {
+    color: #ddd;
 }
 
 /* Navigation styles */
