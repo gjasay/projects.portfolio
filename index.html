@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+    <header id="header">
+        <h1 class="title">My Projects</h1>
+        <nav id="navigation">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="/all-projects" id="all-projects-tab">All Projects</a></li>
+                <li class="nav-item"><a href="/javascript-projects" id="javascript-projects-tab">JavaScript Projects</a></li>
+                <li class="nav-item"><a href="/unity-csharp-projects" id="unity-csharp-projects-tab">Unity/C# Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="project" id="project1" data-type="javascript">
+            <h2 class="project-title">Snake</h2>
+            <p class="project-description">This is my recreation of the classic game of snake. I created it using vanilla JavaScript.</p>
+            <a target ="_blank" href="https://github.com/gjasay/Snake" class="project-link">View Project</a>
+        </section>
+
+        <section class="project" id="project2" data-type="javascript">
+            <h2 class="project-title">Pond Plop</h2>
+            <p class="project-description">This is a video game I created based on a two player board game called boop. I made this using PixiJS and I'm currently working on implenting local multiplayer using WebSockets.</p>
+            <a target ="_blank" href="https://github.com/gjasay/Pond-Plop" class="project-link">View Project</a>
+        </section>
+
+        <section class="project" id="project3" data-type="unity-csharp">
+            <h2 class="project-title">Murphy's Madness</h2>
+            <p class="project-description">This is a 3D mad libs style game. I was one of three programmers on this project we developed for Global Game Jam 2024. We used React, ThreeJS, and TypeScript for this project.</p>
+            <a target="_blank" href="https://ggj-2024.vercel.app/" class="project-link">View Project</a>
+        </section>
+
+        <!-- Add more project sections as needed -->
+
+    </main>
+
+    <footer id="footer">
+        <p class="copyright">Go Back to My Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
