@@ -4,7 +4,9 @@ const javascriptProjectsTab = document.getElementById('javascript-projects-tab')
 const unityCsharpProjectsTab = document.getElementById('unity-csharp-projects-tab');
 
 // Get project sections
-const projects = document.getElementsByClassName('project');
+const projects = Array.from(document.getElementsByClassName('project'));
+
+let currentImageIndex = 0;
 
 // Function to display projects based on type
 function displayProjects(type) {
@@ -47,3 +49,19 @@ window.onload = function() {
         displayProjects('all');
     }
 };
+
+projects.forEach(project => {
+    const images = project.querySelectorAll('.project-image');
+    if (images.length > 1) {
+        setInterval(() => {
+            currentImageIndex++;
+            if (currentImageIndex >= images.length) {
+                currentImageIndex = 0;
+            }
+            const amountToMove = currentImageIndex * images[0].clientWidth;
+            images.forEach(image => {
+                image.style.transform = `translateX(-${amountToMove}px)`;
+            });
+        }, 3000); // Change image every 3 seconds
+    }
+});

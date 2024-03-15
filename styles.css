@@ -88,3 +88,18 @@ body {
 .nav-item a:hover {
     color: #ddd;
 }
+
+/* Project Images */
+
+.project-images {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.project-image {
+    flex-shrink: 0;
+    width: 25%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
