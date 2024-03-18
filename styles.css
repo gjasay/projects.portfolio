@@ -13,7 +13,7 @@ body {
     color: white;
     padding: 20px 0;
     text-align: center;
-    border-bottom: 5px solid #007BFF;
+    border-bottom: 3px solid #FF6347; /* Tomato red */
 }
 
 .title {
@@ -57,7 +57,7 @@ body {
     color: white;
     text-align: center;
     padding: 20px 0;
-    border-top: 5px solid #007BFF;
+    border-top: 3px solid #FF6347; /* Tomato red */
 }
 
 .go-back {
@@ -123,12 +123,12 @@ body {
     display: inline-block;
     padding: 10px 20px;
     color: #fff;
-    background-color: #007BFF;
+    background-color: #FF6347; /* Tomato red */
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .button-container a:hover {
-    background-color: #0056b3;
+    background-color: #FF4500; /* Darker tomato red */
 }
